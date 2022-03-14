@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 const { spawn } = require('child_process')
-const HyperDHT = require('@hyperswarm/dht')
+const BitDHT = require('@web4/dht')
 const net = require('net')
 const pump = require('pump')
 const os = require('os')
 
-const helpMsg = 'Usage: hyperssh [--rdp?] [key] [user?] [ssh-options...]'
+const helpMsg = 'Usage: bitssh [--rdp?] [key] [user?] [ssh-options...]'
 
 if (!process.argv[2]) {
   console.error(helpMsg)
@@ -23,7 +23,7 @@ if (!key || !/^[a-fA-F0-9]{64}$/.test(key)) {
   process.exit(1)
 }
 
-const dht = new HyperDHT()
+const dht = new BitDHT()
 
 const proxy = net.createServer(function (socket) {
   const stream = dht.connect(Buffer.from(key, 'hex'))

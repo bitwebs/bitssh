@@ -1,27 +1,27 @@
 {
-  "name": "hyperssh",
-  "version": "3.2.0",
-  "description": "Run SSH over Hyperswarm Beta!",
+  "name": "@web4/ssh",
+  "version": "1.0.0",
+  "description": "Run SSH over Bitswarm Beta!",
   "main": "index.js",
   "dependencies": {
-    "@hyperswarm/dht": "next",
+    "@web4/dht": "next",
     "minimist": "^1.2.5",
     "pump": "^3.0.0"
   },
   "devDependencies": {},
   "bin": {
-    "hyperssh-server": "./server.js",
-    "hyperssh-fuse": "./fuse.js",
-    "hyperssh": "./client.js"
+    "bitssh-server": "./server.js",
+    "bitssh-fuse": "./fuse.js",
+    "bitssh": "./client.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mafintosh/hyperssh.git"
+    "url": "https://github.com/bitwebs/bitssh.git"
   },
   "author": "Mathias Buus (@mafintosh)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mafintosh/hyperssh/issues"
+    "url": "https://github.com/mafintosh/bitssh/issues"
   },
-  "homepage": "https://github.com/mafintosh/hyperssh"
+  "homepage": "https://github.com/mafintosh/bitssh"
 }

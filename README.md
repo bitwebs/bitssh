@@ -1,10 +1,10 @@
-# hyperssh
+# bitssh
 
-Run SSH over the [Hyperswarm DHT](https://github.com/hyperswarm/dht)!
+Run SSH over the [BitWeb DHT](https://github.com/bitwebs/dht)!
 
 ### Installation
 ```
-npm install -g hyperssh
+npm install -g @web4/ssh
 ```
 
 ### Usage
@@ -12,35 +12,35 @@ npm install -g hyperssh
 On a server or some laptop with ssh-server running run
 
 ```sh
-hyperssh-server
+bitssh-server
 ```
 
 This will start announcing the server on the DHT, and will print out the Noise public key of the server.
 
-To connect to the server on another computer simply pass the Noise public key to the `hyperssh` command, along with an optional username:
+To connect to the server on another computer simply pass the Noise public key to the `bitssh` command, along with an optional username:
 
 ```sh
-hyperssh ab01f... maf
+bitssh ab01f... maf
 ```
 
 That's it! No more remembering hostnames :D
 
-Hyperswarm will do UDP holepunching under the hood, so even if your server is located on a home network it should be accessible.
+Bitswarm will do UDP holepunching under the hood, so even if your server is located on a home network it should be accessible.
 
 ### Windows RDP
 
-You can also use hyperssh with Windows RDP to remotely log in to your windows machines over Hyperswarm.
+You can also use bitssh with Windows RDP to remotely log in to your windows machines over Bitswarm.
 
 On the machine you want to log in to (make sure you have RDP enabled)
 
 ```sh
-hyperssh-server --rdp
+bitssh-server --rdp
 ```
 
 Then on another computer somewhere on the internet do
 
 ```sh
-hyperssh --rdp ab0f...
+bitssh --rdp ab0f...
 ```
 
 And open your favorite RDP client, configure it to connect to localhost over port 3389 (default),
